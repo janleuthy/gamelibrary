@@ -45,4 +45,17 @@ class DefaultController
         $view->heading = 'Startseite';
         $view->display();
     }
+    public function ueberuns()
+    {
+        $view = new View('default/ueberuns');
+        $view->title = 'Über uns';
+        $view->heading = 'Über uns';
+        $view->display();
+    }
+    public function kontakt() {
+        $view = new View('default/kontakt');
+        $view->title = 'Kontakt';
+        $view->heading = 'Kontakt';
+        $view->display();
+    }
 }

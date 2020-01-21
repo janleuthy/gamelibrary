@@ -24,3 +24,16 @@ body > .container {
   padding-right: 15px;
   padding-left: 15px;
 }
+
+#cswallpaper {
+  background-image: url("/images/wallpaper_cs.jpg");
+  height: 300px;
+}
+
+#sensewallpaper {
+  background-image: url("/images/wallpaper_sense.jpg");
+}
+
+#footer {
+  color: #343a40;
+}
