@@ -1,8 +1,3 @@
-<!-- Header - set the background image for the header in the line below -->
-<header class="py-5 bg-image-full" id="sensewallpaper">
-    <img class="img-fluid d-block mx-auto" src="/images/logo.png" alt="">
-</header>
-
 <section class="py-5">
     <div class="container">
         <h1>Game Library</h1>
