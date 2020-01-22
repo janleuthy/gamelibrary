@@ -10,7 +10,7 @@ use App\View\View;
 class GameController
 {
     public function index() {
-        $view = new View('/game/all');
+        $view = new View('/game/index');
         $view->title = 'Ihre Spiele';
         $view->heading = 'Spiele';
         $view->display();
