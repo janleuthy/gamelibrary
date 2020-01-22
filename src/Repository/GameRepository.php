@@ -3,12 +3,14 @@
 
 namespace App\Repository;
 
+use App\Database\ConnectionHandler;
+use Exception;
 
-class GamesRepository extends Repository
+class GameRepository extends Repository
 {
     protected $tableName = 'games';
 
-    public function createGame($name, $beschreibung)
+    public function create($name, $beschreibung)
     {
         $query = "INSERT INTO $this->tableName (name , beschreibung) VALUES (?, ?)";
 

@@ -87,5 +87,5 @@
 </div>
 
 <div class="row justify-content-center whitespacecards">
-    <a href="/spiele/new" class="btn btn-dark btn-lg">Neues Spiel erfassen</a>
+    <a href="/game/create" class="btn btn-dark btn-lg">Neues Spiel erfassen</a>
 </div>

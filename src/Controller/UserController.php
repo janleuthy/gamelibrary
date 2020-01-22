@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Repository\UserRepository;
-use App\Repository\GamesRepository;
+use App\Repository\GameRepository;
 use App\View\View;
 
 /**
@@ -14,8 +14,10 @@ class UserController
     public function index()
     {
         $userRepository = new UserRepository();
+        $gamesRepository = new GameRepository();
 
         $view = new View('user/index');
+
         $view->title = 'Benutzer';
         $view->heading = 'Benutzer';
         $view->users = $userRepository->readAll();
@@ -29,13 +31,6 @@ class UserController
         $view->heading = 'Benutzer erstellen';
         $view->display();
     }
-    public function createGames()
-    {
-        $view = new View('games/createGame');
-        $view->title = 'Benutzer erstellen';
-        $view->heading = 'Benutzer erstellen';
-        $view->display();
-    }
 
     public function doCreate()
     {
@@ -43,10 +38,11 @@ class UserController
             $firstName = $_POST['fname'];
             $lastName = $_POST['lname'];
             $email = $_POST['email'];
+            $username = $_POST['username'];
             $password = $_POST['password'];
 
             $userRepository = new UserRepository();
-            $userRepository->create($firstName, $lastName, $email, $password);
+            $userRepository->create($firstName, $lastName, $email, $username, $password);
         }
 
         // Anfrage an die URI /user weiterleiten (HTTP 302)

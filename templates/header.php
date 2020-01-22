@@ -33,7 +33,7 @@
                         <a class="nav-link" href="/default/kontakt">Kontakt</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/spiele/all">Spiele</a>
+                        <a class="nav-link" href="/game/index">Spiele</a>
                     </li>
                 </ul>
             </div>
