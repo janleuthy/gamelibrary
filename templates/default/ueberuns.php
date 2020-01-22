@@ -1,5 +1,5 @@
 <form class="container">
-    <div class="row justify-content-center" id="topmargin">
+    <div class="row justify-content-center topmargin">
         <h1><?= $title ?></h1>
     </div>
     <div class="row pt-3 pb-3">

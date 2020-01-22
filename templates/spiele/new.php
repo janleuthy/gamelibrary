@@ -1,16 +1,30 @@
+<div class="row justify-content-center topmargin">
+    <h1><?= $title ?></h1>
+</div>
+
 <form class="container">
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-  </div>
-  <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-secondary">Submit</button>
+    <div class="form-group">
+        <label>Name des Spiels</label>
+        <input type="text" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label>Beschreibung des Spiels</label>
+        <textarea class="form-control" rows="3" required></textarea>
+    </div>
+    <label>Bild hinzufügen</label>
+    <div class="form-group custom-file">
+        <input type="file" class="custom-file-input" id="customFile">
+        <label class="custom-file-label" for="customFile">Bild auswählen</label>
+        <small id="emailHelp" class="form-text text-muted">Für die optimale Anzeige, wählen sie ein Bild mit einer 16:9 Auflösung</small>
+    </div>
+    <br>
+  <button type="submit" class="btn btn-secondary">Neues Spiel hinzufügen</button>
 </form>
+
+
+<script>
+    $(".custom-file-input").on("change", function() {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+</script>
