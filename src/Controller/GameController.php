@@ -22,6 +22,13 @@ class GameController
         $view->heading = 'Spiel hinzufügen';
         $view->display();
     }
+    public function edit(){
+        $view = new View('game/edit');
+        $view->title = 'Spiel bearbeiten';
+        $view->heading = 'Spiel bearbeiten';
+        $view->display();
+
+    }
 
     public function doCreate()
     {
