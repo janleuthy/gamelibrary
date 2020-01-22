@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b956ac0d-528c-4d6d-b214-87711ebd7c55" name="Default Changelist" comment="" />
+    <list default="true" id="b956ac0d-528c-4d6d-b214-87711ebd7c55" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mvc-model.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mvc-model.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +19,14 @@
       <executable />
     </execution>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
+  </component>
   <component name="ProjectId" id="1WhBxr2QHLMZqFthtPZW2uGQX7J" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -21,8 +35,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\bleutj\Desktop\GameLibrary" />
+    </key>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -48,6 +69,8 @@
       <updated>1579592195514</updated>
       <workItem from="1579592197405" duration="1244000" />
       <workItem from="1579593640103" duration="1366000" />
+      <workItem from="1579601376551" duration="1345000" />
+      <workItem from="1579604303793" duration="6381000" />
     </task>
     <servers />
   </component>
@@ -59,6 +82,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="667" y="116" key="#PHP/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579592256740" />
+    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1579601907701">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="740" y="280" key="FileChooserDialogImpl/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579601907701" />
+    <state x="461" y="168" key="SettingsEditor" timestamp="1579601911361">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="461" y="168" key="SettingsEditor/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579601911361" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1579676965360">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579676965360" />
+    <state x="677" y="317" key="git4idea.merge.GitPullDialog" timestamp="1579676989188">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="677" y="317" key="git4idea.merge.GitPullDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579676989188" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1579594373810">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
