@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Repository\UserRepository;
+use App\Repository\GamesRepository;
 use App\View\View;
 
 /**
@@ -24,6 +25,13 @@ class UserController
     public function create()
     {
         $view = new View('user/create');
+        $view->title = 'Benutzer erstellen';
+        $view->heading = 'Benutzer erstellen';
+        $view->display();
+    }
+    public function createGames()
+    {
+        $view = new View('games/createGame');
         $view->title = 'Benutzer erstellen';
         $view->heading = 'Benutzer erstellen';
         $view->display();
