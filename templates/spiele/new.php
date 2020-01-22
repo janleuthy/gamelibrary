@@ -15,10 +15,9 @@
     <div class="form-group custom-file">
         <input type="file" class="custom-file-input" id="customFile">
         <label class="custom-file-label" for="customFile">Bild auswählen</label>
-        <small id="emailHelp" class="form-text text-muted">Für die optimale Anzeige, wählen sie ein Bild mit einer 16:9 Auflösung</small>
+        <small id="emailHelp" class="form-text text-muted">Für die optimale Anzeige, wählen Sie ein Bild mit einer 16:9 Auflösung</small>
     </div>
-    <br>
-  <button type="submit" class="btn btn-secondary">Neues Spiel hinzufügen</button>
+    <button type="submit" class="btn btn-secondary">Neues Spiel erfassen</button>
 </form>
 
 
