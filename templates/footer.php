@@ -1,8 +1,8 @@
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="container">
-        <span class="text-muted">&copy; ICT Berufsbildungcenter AG 2016</span>
+        <span class="text-muted">&copy; Game Library 2020</span>
       </div>
     </footer>
 
