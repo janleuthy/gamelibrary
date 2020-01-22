@@ -4,20 +4,22 @@
 
 <form class="container">
     <div class="form-group">
-        <label>Name des Spiels</label>
+        <label>Name des Spiels bearbeiten</label>
         <input type="text" class="form-control" required>
     </div>
     <div class="form-group">
-        <label>Beschreibung des Spiels</label>
+        <label>Beschreibung des Spiels bearbeiten</label>
         <textarea class="form-control" rows="3" required></textarea>
     </div>
-    <label>Bild hinzufügen</label>
+    <label>Bild hinzufügen / ändern</label>
     <div class="form-group custom-file">
         <input type="file" class="custom-file-input" id="customFile">
         <label class="custom-file-label" for="customFile">Bild auswählen</label>
         <small id="emailHelp" class="form-text text-muted">Für die optimale Anzeige, wählen Sie ein Bild mit einer 16:9 Auflösung.</small>
     </div>
-    <button type="submit" class="btn btn-secondary">Neues Spiel erfassen</button>
+    <br>
+    <button type="submit" class="btn btn-secondary">Speichern</button>
+    <button class="btn btn-danger">Abbrechen</button>
 </form>
 
 
