@@ -80,11 +80,16 @@ class View
         }
     }
 
-    public function display()
+    public function display($login=false)
     {
+
         extract($this->properties);
 
-        require './../templates/header.php';
+        if ($login == false)
+            require './../templates/header.php';
+        else
+            require './../templates/headerlogin.php';
+
         require $this->viewfile;
         require './../templates/footer.php';
     }

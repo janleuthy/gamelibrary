@@ -17,8 +17,9 @@
             <label class="custom-file-label" for="customFile">Bild auswählen</label>
             <small id="emailHelp" class="form-text text-muted">Für die optimale Anzeige, wählen sie ein Bild mit einer 16:9 Auflösung.</small>
         </div>
-        <br>
-        <button type="submit" class="btn btn-secondary" name="send">Neues Spiel hinzufügen</button>
+        <div class="row justify-content-center whitespacecards">
+            <button type="submit" class="btn btn-secondary">Neues Spiel hinzufügen</button>
+        <div>
     </form>
 
 

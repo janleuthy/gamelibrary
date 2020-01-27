@@ -11,7 +11,7 @@ use RuntimeException;
  * selbe Verbindung auf die Datenbank zur Verfügung zu stellen.
  *
  * Bevor die Verbindung verwendet werden kann, muss die Datei config.php
- * entsprechend der Beschrebing in der Datei config.example.php erstellt werden.
+ * entsprechend der Beschrebing in der Datei config.php erstellt werden.
  * Danach kann die Verbindung in den repositories folgendermassen aufgerufen
  * werden.
  *

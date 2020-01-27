@@ -41,9 +41,9 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             [username]
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="/user/profile">Profil</a>
-                            <a class="dropdown-item" href="#">Log Out</a>
+                            <a class="dropdown-item" href="/default/index">Log Out</a>
                         </div>
                     </li>
                 </ul>

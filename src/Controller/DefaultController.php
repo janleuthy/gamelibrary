@@ -37,25 +37,28 @@ class DefaultController
      */
     public function index()
     {
-        // In diesem Fall möchten wir dem Benutzer die View mit dem Namen
-        //   "default_index" rendern. Wie das genau funktioniert, ist in der
-        //   View Klasse beschrieben.
+        $login = SessionCheck::CheckSession();
+
         $view = new View('default/index');
         $view->title = 'Startseite';
         $view->heading = 'Startseite';
-        $view->display();
+        $view->display($login);
     }
     public function ueberuns()
     {
+        $login = SessionCheck::CheckSession();
+
         $view = new View('default/ueberuns');
         $view->title = 'Über uns';
         $view->heading = 'Über uns';
-        $view->display();
+        $view->display($login);
     }
     public function kontakt() {
+        $login = SessionCheck::CheckSession();
+
         $view = new View('default/kontakt');
         $view->title = 'Kontakt';
         $view->heading = 'Kontakt';
-        $view->display();
+        $view->display($login);
     }
 }

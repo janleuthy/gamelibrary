@@ -16,20 +16,24 @@ class UserController
         $userRepository = new UserRepository();
         $gamesRepository = new GameRepository();
 
+        $login = SessionCheck::CheckSession();
+
         $view = new View('user/index');
 
         $view->title = 'Benutzer';
         $view->heading = 'Benutzer';
         $view->users = $userRepository->readAll();
-        $view->display();
+        $view->display($login);
     }
 
     public function create()
     {
+        $login = SessionCheck::CheckSession();
+
         $view = new View('user/create');
         $view->title = 'Benutzer erstellen';
         $view->heading = 'Benutzer erstellen';
-        $view->display();
+        $view->display($login);
     }
 
     public function doCreate()
@@ -50,26 +54,32 @@ class UserController
     }
 
     public function login() {
+        $login = SessionCheck::CheckSession();
+
         $view = new View('user/login');
         $view->title = 'Anmelden';
         $view->heading = 'Anmelden';
-        $view->display();
+        $view->display($login);
     }
 
     public function edit()
     {
+        $login = SessionCheck::CheckSession();
+
         $view = new View('user/edit');
         $view->title = 'Benutzer bearbeiten';
         $view->heading = 'Benutzer bearbeiten';
-        $view->display();
+        $view->display($login);
     }
 
     public function profile()
     {
+        $login = SessionCheck::CheckSession();
+
         $view = new View('user/profile');
         $view->title = 'Profil';
         $view->heading = 'Profil';
-        $view->display();
+        $view->display($login);
     }
 
     public function delete()

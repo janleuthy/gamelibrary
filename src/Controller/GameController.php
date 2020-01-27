@@ -10,23 +10,29 @@ use App\View\View;
 class GameController
 {
     public function index() {
+        $login = SessionCheck::CheckSession();
+
         $view = new View('/game/index');
         $view->title = 'Ihre Spiele';
         $view->heading = 'Spiele';
-        $view->display();
+        $view->display($login);
     }
     public function create()
     {
+        $login = SessionCheck::CheckSession();
+
         $view = new View('game/create');
         $view->title = 'Neues Game';
         $view->heading = 'Spiel hinzufügen';
-        $view->display();
+        $view->display($login);
     }
     public function edit(){
+        $login = SessionCheck::CheckSession();
+
         $view = new View('game/edit');
         $view->title = 'Spiel bearbeiten';
         $view->heading = 'Spiel bearbeiten';
-        $view->display();
+        $view->display($login);
 
     }
 
