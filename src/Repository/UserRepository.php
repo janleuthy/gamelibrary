@@ -48,4 +48,38 @@ class UserRepository extends Repository
 
         return $statement->insert_id;
     }
+    public function login($username, $password) {
+        $password = sha1($password);
+
+        // Query erstellen
+        $query = "SELECT * FROM {$this->tableName} WHERE username=? AND password=?";
+
+        // Datenbankverbindung anfordern und, das Query "preparen" (vorbereiten)
+        // und die Parameter "binden"
+        $statement = ConnectionHandler::getConnection()->prepare($query);
+        $statement->bind_param('ss', $username, $password);
+
+        // Das Statement absetzen
+        $statement->execute();
+
+        // Resultat der Abfrage holen
+        $result = $statement->get_result();
+        if (!$result) {
+            throw new Exception($statement->error);
+        }
+
+        // Ersten Datensatz aus dem Reultat holen
+        $row = $result->fetch_object();
+
+        // Datenbankressourcen wieder freigeben
+        $result->close();
+
+        // Session start
+        session_start();
+        $_SESSION["count"] = 0;
+        $_SESSION["user"] = $row->username;
+
+        // Den gefundenen Datensatz zurückgeben
+        return $row;
+    }
 }

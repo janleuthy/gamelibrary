@@ -39,11 +39,11 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            [username]
+                            <?php $username ?>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="/user/profile">Profil</a>
-                            <a class="dropdown-item" href="/default/index">Log Out</a>
+                            <a class="dropdown-item" href="/user/doLogout">Log Out</a>
                         </div>
                     </li>
                 </ul>

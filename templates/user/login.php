@@ -2,15 +2,15 @@
     <h1><?= $title ?></h1>
 </div>
 <div class="row justify-content-center topmargin">
-    <form class="col-6">
+    <form class="col-6" action="/user/doLogin" method="post">
         <div class="form-group">
-            <label>E-Mail Adresse</label>
-            <input type="email" class="form-control" placeholder="E-Mail Adresse" required>
+            <label>Username</label>
+            <input name="username" type="text" class="form-control" placeholder="Username" required>
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Passwort</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+            <label for="InputPassword">Passwort</label>
+            <input name="password" type="password" class="form-control" id="InputPassword" placeholder="Password" required>
         </div>
-        <button type="submit" class="btn btn-secondary">Login</button>
+        <button name="login" type="submit" class="btn btn-secondary">Login</button>
     </form>
 </div>

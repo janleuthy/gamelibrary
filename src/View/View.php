@@ -82,10 +82,9 @@ class View
 
     public function display($login=false)
     {
-
         extract($this->properties);
 
-        if ($login == false)
+        if ($login)
             require './../templates/header.php';
         else
             require './../templates/headerlogin.php';

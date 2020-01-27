@@ -53,6 +53,33 @@ class UserController
         header('Location: /user');
     }
 
+    public function doLogin() {
+        if (isset($_POST['login'])) {
+
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+
+            $userRepository = new UserRepository();
+            $userRepository->login($username, $password);
+
+            if (SessionCheck::CheckSession()){
+                //print_r($_SESSION);
+                header('Location: /game');
+            }
+            else {
+                header('Location: /user/login');
+            }
+        }
+    }
+
+    public function doLogout() {
+        session_start();
+        session_destroy();
+        unset($_SESSION["count"]);
+        unset($_SESSION["user"]);
+        header('Location: /');
+    }
+
     public function login() {
         $login = SessionCheck::CheckSession();
 
