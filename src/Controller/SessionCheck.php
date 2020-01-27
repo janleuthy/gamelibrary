@@ -8,9 +8,10 @@ class SessionCheck
 {
     public static function CheckSession() {
         session_start();
-        if(isset($_SESSION["count"]))
+        if(isset($_SESSION["count"])) {
             return $_SESSION["user"];
+        }
         else
-            return "";
+            return null;
     }
 }

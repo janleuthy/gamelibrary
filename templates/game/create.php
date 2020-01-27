@@ -4,12 +4,16 @@
 <div class="row justify-content-center topmargin">
     <form action="/game/doCreate" method="post" class="col-6">
         <div class="form-group">
-            <label>Name des Spiels</label>
-            <input type="text" class="form-control" name="name" required>
+            <label class="control-label" for="name" title='Voraussetzungen:
+            min. 1 Zeichen
+            max. 40 Zeichen'>Name des Spiels<sup>?</sup></label>
+            <input type="text" class="form-control" name="name" required oninput="checkInputNewGame(this)">
         </div>
         <div class="form-group">
-            <label>Beschreibung des Spiels</label>
-            <textarea class="form-control" rows="3" name="beschreibung" required></textarea>
+            <label class="control-label" for="name" title='Voraussetzungen:
+            min. 1 Zeichen
+            max. 100 Zeichen'>Beschreibung des Spiels<sup>?</sup></label>
+            <textarea class="form-control" rows="3" name="beschreibung" required oninput="checkInputGameDescription(this)"></textarea>
         </div>
         <label>Bild hinzufügen</label>
         <div class="form-group custom-file">

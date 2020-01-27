@@ -12,7 +12,7 @@
             <input id="lname" name="lname" type="text" class="form-control" placeholder="Nachname" required oninput="checkInputNachname(this)">
         </div>
         <div class="form-group">
-            <label class="control-label" for="username" title='Passwort Voraussetzungen:
+            <label class="control-label" for="username" title='Benutzername Voraussetzungen:
             min. 4 Zeichen
             max. 20 Zeichen
             '>Benutzername<sup>?</sup></label>
@@ -34,6 +34,7 @@
             max. 20 Zeichen'>Passwort bestätigen<sup>?</sup></label>
             <input id="password2" name="password2" type="password" class="form-control" placeholder="Passwort bestätigen" required oninput="checkInputPasswordRepeat(this)">
         </div>
+        <
         <div class="whitespacecards">
             <button type="submit" class="btn btn-secondary" name="send">Neuen Benutzer erstellen</button>
         </div>

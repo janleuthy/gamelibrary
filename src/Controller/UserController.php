@@ -78,7 +78,6 @@ class UserController
             $userRepository->login($username, $password);
 
             if (SessionCheck::CheckSession()){
-                //print_r($_SESSION);
                 header('Location: /game');
             }
             else {
@@ -91,29 +90,35 @@ class UserController
         session_start();
         session_destroy();
         unset($_SESSION["count"]);
-        unset($_SESSION["user"]);
+        unset($_SESSION["username"]);
+        unset($_SESSION["id"]);
         header('Location: /');
     }
 
     public function login() {
         $login = SessionCheck::CheckSession();
-
-        $view = new View('user/login');
-        $view->title = 'Anmelden';
-        $view->heading = 'Anmelden';
-        $view->username = $login;
-        $view->display($login);
+        if (!$login)
+        {
+            $view = new View('user/login');
+            $view->title = 'Anmelden';
+            $view->heading = 'Anmelden';
+            $view->username = "";
+            $view->display(0);
+        }
+        else {
+            header('Location: /user/dologout');
+        }
     }
 
     public function edit()
     {
         $login = SessionCheck::CheckSession();
-        if ($login != "") {
+        if ($login) {
         $view = new View('user/edit');
         $view->title = 'Benutzer bearbeiten';
         $view->heading = 'Benutzer bearbeiten';
-        $view->username = $login;
-        $view->display($login);
+        $view->username = $login["username"];
+        $view->display($login["id"]);
         }
         else {
             header('location: /user/login');
@@ -123,12 +128,12 @@ class UserController
     public function profile()
     {
         $login = SessionCheck::CheckSession();
-        if ($login != "") {
+        if ($login) {
             $view = new View('user/profile');
             $view->title = 'Profil';
             $view->heading = 'Profil';
-            $view->username = $login;
-            $view->display($login);
+            $view->username = $login["username"];
+            $view->display($login["id"]);
         }
         else {
             header('location: /user/login');

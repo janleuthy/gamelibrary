@@ -77,7 +77,8 @@ class UserRepository extends Repository
         // Session start
         session_start();
         $_SESSION["count"] = 0;
-        $_SESSION["user"] = $row->username;
+        $_SESSION["user"]["username"] = $row->username;
+        $_SESSION["user"]["id"] = $row->id;
 
         // Den gefundenen Datensatz zurückgeben
         return $row;

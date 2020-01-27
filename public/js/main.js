@@ -52,3 +52,21 @@ function checkInputPasswordRepeat(checkPasswordRepeat) {
         checkPasswordRepeat.style.border = "2px solid green";
     }
 }
+
+function checkInputNewGame(checkNewGame) {
+    if(checkNewGame.value.length < 1 || checkNewGame.value.length > 40) {
+        checkNewGame.style.border = "2px solid red";
+    }
+    else {
+        checkNewGame.style.border = "2px solid green";
+    }
+}
+
+function checkInputGameDescription(checkDescription) {
+    if(checkDescription.value.length < 1 || checkDescription.value.length > 100) {
+        checkDescription.style.border = "2px solid red";
+    }
+    else {
+        checkDescription.style.border = "2px solid green";
+    }
+}

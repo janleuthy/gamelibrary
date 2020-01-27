@@ -80,11 +80,11 @@ class View
         }
     }
 
-    public function display($login=false)
+    public function display($login=0)
     {
         extract($this->properties);
 
-        if (strlen($login) > 0)
+        if ($login > 0)
             require './../templates/header.php';
         else
             require './../templates/headerlogin.php';

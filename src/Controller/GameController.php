@@ -11,12 +11,12 @@ class GameController
 {
     public function index() {
         $login = SessionCheck::CheckSession();
-        if ($login != "") {
+        if ($login) {
             $view = new View('/game/index');
             $view->title = 'Ihre Spiele';
             $view->heading = 'Spiele';
-            $view->username = $login;
-            $view->display($login);
+            $view->username = $login["username"];
+            $view->display($login["id"]);
         }
         else {
             header('Location: /user/login');
@@ -25,12 +25,12 @@ class GameController
     public function create()
     {
         $login = SessionCheck::CheckSession();
-        if ($login != "") {
+        if ($login) {
             $view = new View('game/create');
             $view->title = 'Neues Game';
             $view->heading = 'Spiel hinzufügen';
-            $view->username = $login;
-            $view->display($login);
+            $view->username = $login["username"];
+            $view->display($login["id"]);
         }
         else {
             header('Location: /user/login');
@@ -38,12 +38,12 @@ class GameController
     }
     public function edit(){
         $login = SessionCheck::CheckSession();
-        if ($login != "") {
+        if ($login) {
             $view = new View('game/edit');
             $view->title = 'Spiel bearbeiten';
             $view->heading = 'Spiel bearbeiten';
-            $view->username = $login;
-            $view->display($login);
+            $view->username = $login["username"];
+            $view->display($login["id"]);
         }
         else {
             header('Location: /user/login');
