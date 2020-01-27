@@ -49,6 +49,29 @@ class UserController
         header('Location: /user');
     }
 
+    public function login() {
+        $view = new View('user/login');
+        $view->title = 'Anmelden';
+        $view->heading = 'Anmelden';
+        $view->display();
+    }
+
+    public function edit()
+    {
+        $view = new View('user/edit');
+        $view->title = 'Benutzer bearbeiten';
+        $view->heading = 'Benutzer bearbeiten';
+        $view->display();
+    }
+
+    public function profile()
+    {
+        $view = new View('user/profile');
+        $view->title = 'Profil';
+        $view->heading = 'Profil';
+        $view->display();
+    }
+
     public function delete()
     {
         $userRepository = new UserRepository();

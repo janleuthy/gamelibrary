@@ -2,7 +2,7 @@
     <h1><?= $title ?></h1>
 </div>
 <div class="row justify-content-center topmargin">
-    <form action="/user/docreate" method="post" class="col-6">
+    <form class="col-6">
         <div class="form-group">
             <label for="fname">Vorname</label>
             <input id="fname" name="fname" type="text" class="form-control" placeholder="Vorname" required>
@@ -20,15 +20,16 @@
             <input id="email" name="email" type="email" class="form-control" placeholder="E-Mail Adresse" required>
         </div>
         <div class="form-group">
-            <label class="control-label" for="password">Passwort</label>
-            <input id="password" name="password" type="password" class="form-control" placeholder="Passwort" required>
+            <label class="control-label" for="password">Neues Passwort</label>
+            <input id="password" name="password" type="password" class="form-control" placeholder="Neues Passwort" required>
         </div>
         <div class="form-group">
-            <label class="control-label" for="password2">Passwort bestätigen</label>
-            <input id="password2" name="password2" type="password" class="form-control" placeholder="Passwort bestätigen" required>
+            <label class="control-label" for="password2">Neues Passwort bestätigen</label>
+            <input id="password2" name="password2" type="password" class="form-control" placeholder="Neues Passwort bestätigen" required>
         </div>
         <div class="whitespacecards">
-            <button type="submit" class="btn btn-secondary" name="send">Neuen Benutzer erstellen</button>
+            <button type="submit" class="btn btn-secondary">Speichern</button>
+            <button class="btn btn-danger">Abbrechen</button>
         </div>
     </form>
 </div>

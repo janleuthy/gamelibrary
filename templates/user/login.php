@@ -1,13 +1,16 @@
-<form class="container">
-    <label for="inputEmail" class="sr-only">Email Adresse</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-    <div class="checkbox mb-3">
-        <label>
-            <input type="checkbox" value="remember-me"> Remember me
-</label>
-    </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-</form>
-
+<div class="row justify-content-center topmargin">
+    <h1><?= $title ?></h1>
+</div>
+<div class="row justify-content-center topmargin">
+    <form class="col-6">
+        <div class="form-group">
+            <label>E-Mail Adresse</label>
+            <input type="email" class="form-control" placeholder="E-Mail Adresse" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Passwort</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn btn-secondary">Login</button>
+    </form>
+</div>
