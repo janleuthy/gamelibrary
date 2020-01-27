@@ -84,7 +84,7 @@ class View
     {
         extract($this->properties);
 
-        if ($login)
+        if (strlen($login) > 0)
             require './../templates/header.php';
         else
             require './../templates/headerlogin.php';

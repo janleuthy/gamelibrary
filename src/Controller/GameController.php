@@ -15,6 +15,7 @@ class GameController
         $view = new View('/game/index');
         $view->title = 'Ihre Spiele';
         $view->heading = 'Spiele';
+        $view->username = $login;
         $view->display($login);
     }
     public function create()
@@ -24,6 +25,7 @@ class GameController
         $view = new View('game/create');
         $view->title = 'Neues Game';
         $view->heading = 'Spiel hinzufügen';
+        $view->username = $login;
         $view->display($login);
     }
     public function edit(){
@@ -32,6 +34,7 @@ class GameController
         $view = new View('game/edit');
         $view->title = 'Spiel bearbeiten';
         $view->heading = 'Spiel bearbeiten';
+        $view->username = $login;
         $view->display($login);
 
     }

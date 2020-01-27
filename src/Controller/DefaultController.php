@@ -42,6 +42,7 @@ class DefaultController
         $view = new View('default/index');
         $view->title = 'Startseite';
         $view->heading = 'Startseite';
+        $view->username = $login;
         $view->display($login);
     }
     public function ueberuns()
@@ -51,6 +52,7 @@ class DefaultController
         $view = new View('default/ueberuns');
         $view->title = 'Über uns';
         $view->heading = 'Über uns';
+        $view->username = $login;
         $view->display($login);
     }
     public function kontakt() {
@@ -59,6 +61,7 @@ class DefaultController
         $view = new View('default/kontakt');
         $view->title = 'Kontakt';
         $view->heading = 'Kontakt';
+        $view->username = $login;
         $view->display($login);
     }
 }

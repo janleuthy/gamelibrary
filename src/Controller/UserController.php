@@ -23,6 +23,7 @@ class UserController
         $view->title = 'Benutzer';
         $view->heading = 'Benutzer';
         $view->users = $userRepository->readAll();
+        $view->username = $login;
         $view->display($login);
     }
 
@@ -33,6 +34,7 @@ class UserController
         $view = new View('user/create');
         $view->title = 'Benutzer erstellen';
         $view->heading = 'Benutzer erstellen';
+        $view->username = $login;
         $view->display($login);
     }
 
@@ -86,6 +88,7 @@ class UserController
         $view = new View('user/login');
         $view->title = 'Anmelden';
         $view->heading = 'Anmelden';
+        $view->username = $login;
         $view->display($login);
     }
 
@@ -96,6 +99,7 @@ class UserController
         $view = new View('user/edit');
         $view->title = 'Benutzer bearbeiten';
         $view->heading = 'Benutzer bearbeiten';
+        $view->username = $login;
         $view->display($login);
     }
 
@@ -106,6 +110,7 @@ class UserController
         $view = new View('user/profile');
         $view->title = 'Profil';
         $view->heading = 'Profil';
+        $view->username = $login;
         $view->display($login);
     }
 
