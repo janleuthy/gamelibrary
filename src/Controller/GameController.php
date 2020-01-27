@@ -41,10 +41,13 @@ class GameController
         if (isset($_POST['send'])) {
             $name = $_POST['name'];
             $beschreibung = $_POST['beschreibung'];
+            $file = $_POST['file'];
 
             $gamesRepository = new GameRepository();
-            $gamesRepository->create($name, $beschreibung);
-
+            $gamesRepository->create($name, $beschreibung, $file);
+        }
+        else {
+            header('Location: /templates/error.php');
         }
 
         header('Location: /game');
