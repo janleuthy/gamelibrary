@@ -5,20 +5,20 @@
     <form action="/game/doCreate" method="post" class="col-6">
         <div class="form-group">
             <label>Name des Spiels</label>
-            <input type="text" class="form-control" required>
+            <input type="text" class="form-control" name="name" required>
         </div>
         <div class="form-group">
             <label>Beschreibung des Spiels</label>
-            <textarea class="form-control" rows="3" required></textarea>
+            <textarea class="form-control" rows="3" name="beschreibung" required></textarea>
         </div>
         <label>Bild hinzufügen</label>
         <div class="form-group custom-file">
-            <input type="file" class="custom-file-input" id="customFile">
+            <input type="file" class="custom-file-input" id="customFile" name="file">
             <label class="custom-file-label" for="customFile">Bild auswählen</label>
             <small id="emailHelp" class="form-text text-muted">Für die optimale Anzeige, wählen sie ein Bild mit einer 16:9 Auflösung.</small>
         </div>
         <br>
-        <button type="submit" class="btn btn-secondary">Neues Spiel hinzufügen</button>
+        <button type="submit" class="btn btn-secondary" name="send">Neues Spiel hinzufügen</button>
     </form>
 
 

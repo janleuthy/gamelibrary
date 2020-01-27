@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b956ac0d-528c-4d6d-b214-87711ebd7c55" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="b956ac0d-528c-4d6d-b214-87711ebd7c55" name="Default Changelist" comment="Home, Ueber Uns, Kontakt&#10;&#10;To Fix: Hamburger, Space h1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/game/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/game/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/create.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +16,20 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -30,6 +45,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1WhBxr2QHLMZqFthtPZW2uGQX7J" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -40,14 +58,16 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Users\bnauer\Desktop\GameLibrary\gamelibrary\public\images" />
-      <recent name="D:\Users\bnauer\Desktop\GameLibrary\gamelibrary\src\pictures" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Users\bnauer\Desktop\GameLibrary\gamelibrary\public\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\bleutj\Desktop\GameLibrary\templates\game" />
+      <recent name="D:\Users\bnauer\Desktop\GameLibrary\gamelibrary\public\images" />
+      <recent name="D:\Users\bnauer\Desktop\GameLibrary\gamelibrary\src\pictures" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -76,6 +96,7 @@
       <workItem from="1579593640103" duration="1366000" />
       <workItem from="1579600994186" duration="16637000" />
       <workItem from="1579676721070" duration="14679000" />
+      <workItem from="1580108914189" duration="2651000" />
     </task>
     <task id="LOCAL-00001" summary="Home, Ueber Uns, Kontakt&#10;&#10;To Fix: Hamburger, Space h1">
       <created>1579621514873</created>
@@ -98,53 +119,103 @@
       <option name="project" value="LOCAL" />
       <updated>1579696878751</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Home, Ueber Uns, Kontakt&#10;&#10;To Fix: Hamburger, Space h1">
+      <created>1579701615152</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1579701615152</updated>
+    </task>
+    <task id="LOCAL-00005" summary="spiele sachen gelöscht&#10;in game umbenannt">
+      <created>1579702021889</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1579702021889</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Home, Ueber Uns, Kontakt&#10;&#10;To Fix: Hamburger, Space h1">
+      <created>1579704134708</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1579704134708</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Home, Ueber Uns, Kontakt&#10;&#10;To Fix: Hamburger, Space h1" />
     <MESSAGE value="To Fix: Hamburger" />
-    <option name="LAST_COMMIT_MESSAGE" value="To Fix: Hamburger" />
+    <MESSAGE value="spiele sachen gelöscht&#10;in game umbenannt" />
+    <MESSAGE value="Home, Ueber Uns, Kontakt&#10;&#10;To Fix: Hamburger, Space h1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Home, Ueber Uns, Kontakt&#10;&#10;To Fix: Hamburger, Space h1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="-1368" y="184" key="#Inspections" timestamp="1579697233388">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="-1368" y="184" key="#Inspections/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1579697233388" />
     <state x="667" y="116" key="#PHP" timestamp="1579592256740">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="667" y="116" key="#PHP/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579592256740" />
+    <state x="-1368" y="184" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579699269025">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="-1368" y="184" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1579699269025" />
     <state x="733" y="328" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579687396779">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="733" y="328" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1579687396779" />
-    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1579678059583">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="-1206" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1579699711437">
+      <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
+    <state x="-1206" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1579699711437" />
+    <state x="-1230" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1579699467437">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="-1230" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1579699467437" />
     <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1579678059583" />
-    <state x="585" y="122" key="CommitChangelistDialog2" timestamp="1579696877429">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="-1335" y="122" key="CommitChangelistDialog2" timestamp="1579704133255">
+      <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
+    <state x="-1335" y="122" key="CommitChangelistDialog2/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1579704133255" />
     <state x="585" y="122" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1579696877429" />
-    <state x="184" y="92" key="MergeDialog" timestamp="1579696690324">
+    <state x="184" y="92" key="DiffContextDialog" timestamp="1580111607824">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state x="-1736" y="92" key="DiffContextDialog/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1579700709898" />
+    <state x="184" y="92" key="DiffContextDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1580111607824" />
+    <state x="-1736" y="92" key="MergeDialog" timestamp="1579701841908">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="-1736" y="92" key="MergeDialog/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1579701841908" />
     <state x="184" y="92" key="MergeDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1579696690324" />
-    <state x="672" y="241" key="MultipleFileMergeDialog" timestamp="1579696690348">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="-1248" y="241" key="MultipleFileMergeDialog" timestamp="1579701845775">
+      <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
+    <state x="-1248" y="241" key="MultipleFileMergeDialog/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1579701845775" />
     <state x="672" y="241" key="MultipleFileMergeDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1579696690348" />
     <state x="686" y="340" key="NewPhpClassDialog" timestamp="1579687416119">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="686" y="340" key="NewPhpClassDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1579687416119" />
-    <state x="795" y="449" key="NewPhpFileDialog" timestamp="1579687428719">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="-1125" y="449" key="NewPhpFileDialog" timestamp="1579698379125">
+      <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
+    <state x="-1125" y="449" key="NewPhpFileDialog/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1579698379125" />
     <state x="795" y="449" key="NewPhpFileDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1579687428719" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1579696880657">
+    <state x="-1459" y="168" key="SettingsEditor" timestamp="1579698230661">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="-1459" y="168" key="SettingsEditor/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1579698230661" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1580111632595">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state x="-1368" y="258" key="Vcs.Push.Dialog.v2/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1579704136059" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1580111632595" />
     <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1579696880657" />
     <state x="655" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1579676732639">
       <screen x="0" y="0" width="1920" height="1050" />
@@ -158,13 +229,20 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="657" y="123" width="606" height="804" key="find.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1579620480366" />
-    <state x="616" y="243" key="run.anything.popup" timestamp="1579680055522">
+    <state x="677" y="317" key="git4idea.merge.GitPullDialog" timestamp="1580111618259">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state x="-1243" y="317" key="git4idea.merge.GitPullDialog/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1579701681033" />
+    <state x="677" y="317" key="git4idea.merge.GitPullDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1580111618259" />
+    <state x="-1304" y="243" key="run.anything.popup" timestamp="1579699219329">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="-1304" y="243" key="run.anything.popup/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1579699219329" />
     <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1579680055522" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1579594373810">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="-1297" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1579698197868">
+      <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
+    <state x="-1297" y="227" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1579698197868" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579594373810" />
   </component>
 </project>
