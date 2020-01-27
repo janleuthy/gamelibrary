@@ -31,6 +31,19 @@ class UserController
     {
         $login = SessionCheck::CheckSession();
 
+        $errormessage = "";
+
+        /*
+        if (strlen($login) < 4 || strlen($login) > 20) {
+            $errormessage = "Das Passwort muss zwischen 4 und 20 Zeichen gross sein.";
+        }
+
+        else if (is_numeric($login) == false)
+        {
+            $errormessage = "Das Passwort muss eine Zahl beinhalten";
+        }
+        */
+
         $view = new View('user/create');
         $view->title = 'Benutzer erstellen';
         $view->heading = 'Benutzer erstellen';
