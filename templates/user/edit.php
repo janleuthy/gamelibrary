@@ -29,7 +29,7 @@
         </div>
         <div class="whitespacecards">
             <button type="submit" class="btn btn-secondary">Speichern</button>
-            <button class="btn btn-danger">Abbrechen</button>
+            <a class="btn btn-danger text-white" href="/user/profile">Abbrechen</a>
         </div>
     </form>
 </div>

@@ -11,6 +11,11 @@
             <label for="InputPassword">Passwort</label>
             <input name="password" type="password" class="form-control" id="InputPassword" placeholder="Password" required>
         </div>
-        <button name="login" type="submit" class="btn btn-secondary">Login</button>
+        <div>
+            Wenn du noch keinen Account besitzt, kannst du dich <a href="/user/create">hier</a> registrieren.
+        </div>
+        <div class="whitespacecards">
+            <button name="login" type="submit" class="btn btn-secondary">Login</button>
+        </div>
     </form>
 </div>

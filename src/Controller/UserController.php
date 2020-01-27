@@ -130,9 +130,15 @@ class UserController
         $login = SessionCheck::CheckSession();
         if ($login) {
             $view = new View('user/profile');
-            $view->title = 'Profil';
             $view->heading = 'Profil';
+
+            $view->vorname = "Ruben";
+            $view->nachname = "Nauer";
             $view->username = $login["username"];
+            $view->email = "ruben.nauer@bluewin.ch";
+
+            $view->title = "Profil";
+
             $view->display($login["id"]);
         }
         else {

@@ -34,7 +34,9 @@
             max. 20 Zeichen'>Passwort bestätigen<sup>?</sup></label>
             <input id="password2" name="password2" type="password" class="form-control" placeholder="Passwort bestätigen" required oninput="checkInputPasswordRepeat(this)">
         </div>
-        <
+        <div>
+            Wenn du bereits einen Account besitzt, kannst du dich <a href="/user/login">hier</a> anmelden.
+        </div>
         <div class="whitespacecards">
             <button type="submit" class="btn btn-secondary" name="send">Neuen Benutzer erstellen</button>
         </div>
