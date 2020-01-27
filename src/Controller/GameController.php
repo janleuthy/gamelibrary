@@ -11,32 +11,43 @@ class GameController
 {
     public function index() {
         $login = SessionCheck::CheckSession();
-
-        $view = new View('/game/index');
-        $view->title = 'Ihre Spiele';
-        $view->heading = 'Spiele';
-        $view->username = $login;
-        $view->display($login);
+        if ($login != "") {
+            $view = new View('/game/index');
+            $view->title = 'Ihre Spiele';
+            $view->heading = 'Spiele';
+            $view->username = $login;
+            $view->display($login);
+        }
+        else {
+            header('Location: /user/login');
+        }
     }
     public function create()
     {
         $login = SessionCheck::CheckSession();
-
-        $view = new View('game/create');
-        $view->title = 'Neues Game';
-        $view->heading = 'Spiel hinzufügen';
-        $view->username = $login;
-        $view->display($login);
+        if ($login != "") {
+            $view = new View('game/create');
+            $view->title = 'Neues Game';
+            $view->heading = 'Spiel hinzufügen';
+            $view->username = $login;
+            $view->display($login);
+        }
+        else {
+            header('Location: /user/login');
+        }
     }
     public function edit(){
         $login = SessionCheck::CheckSession();
-
-        $view = new View('game/edit');
-        $view->title = 'Spiel bearbeiten';
-        $view->heading = 'Spiel bearbeiten';
-        $view->username = $login;
-        $view->display($login);
-
+        if ($login != "") {
+            $view = new View('game/edit');
+            $view->title = 'Spiel bearbeiten';
+            $view->heading = 'Spiel bearbeiten';
+            $view->username = $login;
+            $view->display($login);
+        }
+        else {
+            header('Location: /user/login');
+        }
     }
 
     public function doCreate()

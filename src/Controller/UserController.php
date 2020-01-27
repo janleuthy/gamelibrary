@@ -95,23 +95,31 @@ class UserController
     public function edit()
     {
         $login = SessionCheck::CheckSession();
-
+        if ($login != "") {
         $view = new View('user/edit');
         $view->title = 'Benutzer bearbeiten';
         $view->heading = 'Benutzer bearbeiten';
         $view->username = $login;
         $view->display($login);
+        }
+        else {
+            header('location: /user/login');
+        }
     }
 
     public function profile()
     {
         $login = SessionCheck::CheckSession();
-
-        $view = new View('user/profile');
-        $view->title = 'Profil';
-        $view->heading = 'Profil';
-        $view->username = $login;
-        $view->display($login);
+        if ($login != "") {
+            $view = new View('user/profile');
+            $view->title = 'Profil';
+            $view->heading = 'Profil';
+            $view->username = $login;
+            $view->display($login);
+        }
+        else {
+            header('location: /user/login');
+        }
     }
 
     public function delete()
