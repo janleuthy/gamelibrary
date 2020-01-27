@@ -39,11 +39,12 @@ class DefaultController
     {
         $login = SessionCheck::CheckSession();
 
+
         $view = new View('default/index');
         $view->title = 'Startseite';
         $view->heading = 'Startseite';
-        $view->username = $login;
-        $view->display($login);
+        $view->username = (isset($login["username"])?$login["username"]:"");
+        $view->display(isset($login["id"])?$login["id"]:"");
     }
     public function ueberuns()
     {
@@ -52,8 +53,8 @@ class DefaultController
         $view = new View('default/ueberuns');
         $view->title = 'Über uns';
         $view->heading = 'Über uns';
-        $view->username = $login;
-        $view->display($login);
+        $view->username = (isset($login["username"])?$login["username"]:"");
+        $view->display(isset($login["id"])?$login["id"]:"");
     }
     public function kontakt() {
         $login = SessionCheck::CheckSession();
@@ -61,7 +62,7 @@ class DefaultController
         $view = new View('default/kontakt');
         $view->title = 'Kontakt';
         $view->heading = 'Kontakt';
-        $view->username = $login;
-        $view->display($login);
+        $view->username = (isset($login["username"])?$login["username"]:"");
+        $view->display(isset($login["id"])?$login["id"]:"");
     }
 }

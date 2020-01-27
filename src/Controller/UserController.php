@@ -31,24 +31,11 @@ class UserController
     {
         $login = SessionCheck::CheckSession();
 
-        $errormessage = "";
-
-        /*
-        if (strlen($login) < 4 || strlen($login) > 20) {
-            $errormessage = "Das Passwort muss zwischen 4 und 20 Zeichen gross sein.";
-        }
-
-        else if (is_numeric($login) == false)
-        {
-            $errormessage = "Das Passwort muss eine Zahl beinhalten";
-        }
-        */
-
         $view = new View('user/create');
         $view->title = 'Benutzer erstellen';
         $view->heading = 'Benutzer erstellen';
-        $view->username = $login;
-        $view->display($login);
+        $view->username = $login["username"];
+        $view->display($login["id"]);
     }
 
     public function doCreate()
@@ -132,13 +119,13 @@ class UserController
             $view = new View('user/profile');
             $view->heading = 'Profil';
 
-            $view->vorname = "Ruben";
-            $view->nachname = "Nauer";
-            $view->username = $login["username"];
-            $view->email = "ruben.nauer@bluewin.ch";
-
             $view->title = "Profil";
 
+            $userRepository = new UserRepository();
+            $view->user = $userRepository->readById($login["id"]);
+
+           // print_r( $userRepository->user);
+            $view->username = $login["username"];
             $view->display($login["id"]);
         }
         else {

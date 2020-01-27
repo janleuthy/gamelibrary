@@ -5,11 +5,11 @@
     <form class="col-6">
         <div class="form-group">
             <label for="fname">Vorname</label>
-            <input id="fname" name="fname" type="text" class="form-control" placeholder="Vorname" required>
+            <input id="fname" name="fname" type="text" class="form-control" placeholder="Vorname" required oninput="checkInputVorname(this)">
         </div>
         <div class="form-group">
             <label for="lname">Nachname</label>
-            <input id="lname" name="lname" type="text" class="form-control" placeholder="Nachname" required>
+            <input id="lname" name="lname" type="text" class="form-control" placeholder="Nachname" required oninput="checkInputNachname(this)">
         </div>
         <div class="form-group">
             <label for="username">Benutzername</label>
