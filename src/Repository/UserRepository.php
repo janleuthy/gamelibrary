@@ -53,7 +53,7 @@ class UserRepository extends Repository
 
         // Query erstellen
         $query = "SELECT * FROM {$this->tableName} WHERE username=? AND password=?";
-
+        echo $query. " ". $username. " ". $password;
         // Datenbankverbindung anfordern und, das Query "preparen" (vorbereiten)
         // und die Parameter "binden"
         $statement = ConnectionHandler::getConnection()->prepare($query);
@@ -81,6 +81,6 @@ class UserRepository extends Repository
         $_SESSION["user"]["id"] = $row->id;
 
         // Den gefundenen Datensatz zurückgeben
-        return $row;
+        // return $row;
     }
 }

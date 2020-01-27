@@ -12,10 +12,12 @@ class GameController
     public function index() {
         $login = SessionCheck::CheckSession();
         if ($login) {
+            $gameRepository = new GameRepository();
             $view = new View('/game/index');
             $view->title = 'Ihre Spiele';
             $view->heading = 'Spiele';
             $view->username = $login["username"];
+            $view->games = $gameRepository->readAllByUserId($login["id"]);
             $view->display($login["id"]);
         }
         else {
@@ -52,16 +54,18 @@ class GameController
 
     public function doCreate()
     {
+        $login = SessionCheck::CheckSession();
+        if ($login) {
         if (isset($_POST['send'])) {
             $name = $_POST['name'];
             $beschreibung = $_POST['beschreibung'];
-            $file = $_POST['file'];
 
             $gamesRepository = new GameRepository();
-            $gamesRepository->create($name, $beschreibung, $file);
+            $gamesRepository->create($name, $beschreibung, $login["id"]);
         }
         else {
             header('Location: /templates/error.php');
+        }
         }
 
         header('Location: /game');

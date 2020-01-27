@@ -2,7 +2,7 @@
     <h1><?= $title ?></h1>
 </div>
 <div class="row justify-content-center topmargin">
-    <form action="/game/doCreate" method="post" class="col-6">
+    <form action="/game/doCreate" method="post" class="col-6" enctype="multipart/form-data">
         <div class="form-group">
             <label class="control-label" for="name" title='Voraussetzungen:
             min. 1 Zeichen
@@ -25,8 +25,6 @@
             <button type="submit" class="btn btn-secondary" name="send">Neues Spiel hinzufügen</button>
         <div>
     </form>
-
-
     <script>
         $(".custom-file-input").on("change", function() {
             var fileName = $(this).val().split("\\").pop();
