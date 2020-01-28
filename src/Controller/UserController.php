@@ -11,22 +11,6 @@ use App\View\View;
  */
 class UserController
 {
-    public function index()
-    {
-        $userRepository = new UserRepository();
-        $gamesRepository = new GameRepository();
-
-        $login = SessionCheck::CheckSession();
-
-        $view = new View('user/index');
-
-        $view->title = 'Benutzer';
-        $view->heading = 'Benutzer';
-        $view->users = $userRepository->readAll();
-        $view->username = $login["username"];
-        $view->display($login["id"]);
-    }
-
     public function create()
     {
         $login = SessionCheck::CheckSession();
@@ -40,6 +24,7 @@ class UserController
 
     public function doCreate()
     {
+        $response;
         if (isset($_POST['send'])) {
             $firstName = $_POST['fname'];
             $lastName = $_POST['lname'];
@@ -48,11 +33,14 @@ class UserController
             $password = $_POST['password'];
 
             $userRepository = new UserRepository();
-            $userRepository->create($firstName, $lastName, $email, $username, $password);
+            $response = $userRepository->create($firstName, $lastName, $email, $username, $password);
         }
-
-        // Anfrage an die URI /user weiterleiten (HTTP 302)
-        header('Location: /user');
+        if($response == null){
+            header('Location: /user/create');
+        }
+        else{
+            header('Location: /game');
+        }
     }
 
     public function doLogin() {
@@ -73,6 +61,24 @@ class UserController
         }
     }
 
+    public function doEdit() {
+        $login = SessionCheck::CheckSession();
+        if ($login) {
+            if (isset($_POST['post'])) {
+                $firstName = $_POST['fname'];
+                $lastName = $_POST['lname'];
+                $email = $_POST['email'];
+                $password = $_POST['password'];
+                $repository = new UserRepository();
+                $repository->editEntry($firstName, $lastName, $email, $password, $login["id"]);
+            }
+            header('Location: /user/profile');
+        }
+        else {
+            header('Location: /user/login');
+        }
+    }
+
     public function doLogout() {
         session_start();
         session_destroy();
@@ -84,7 +90,7 @@ class UserController
 
     public function login() {
         $login = SessionCheck::CheckSession();
-        if (!$login)
+        if (!isset($login["id"]))
         {
             $view = new View('user/login');
             $view->title = 'Anmelden';
@@ -100,7 +106,7 @@ class UserController
     public function edit()
     {
         $login = SessionCheck::CheckSession();
-        if ($login) {
+        if (isset($login["id"])) {
             $view = new View('user/edit');
             $view->title = 'Benutzer bearbeiten';
             $view->heading = 'Benutzer bearbeiten';
@@ -119,7 +125,7 @@ class UserController
     public function profile()
     {
         $login = SessionCheck::CheckSession();
-        if ($login) {
+        if (isset($login["id"])) {
             $view = new View('user/profile');
             $view->heading = 'Profil';
             $view->title = "Profil";

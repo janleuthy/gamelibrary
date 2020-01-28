@@ -70,8 +70,6 @@ class GameRepository extends Repository
 
     public function editEntry($name, $beschreibung, $id)
     {
-        $filename = $this->fileUpload();
-
         $query = "UPDATE $this->tableName SET name=?, beschreibung=? WHERE id=?";
 
         $statement = ConnectionHandler::getConnection()->prepare($query);

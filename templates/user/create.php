@@ -2,7 +2,7 @@
     <h1><?= $title ?></h1>
 </div>
 <div class="row justify-content-center topmargin">
-    <form action="/user/docreate" method="post" class="col-6">
+    <form action="/user/doCreate" method="post" class="col-6">
         <div class="form-group">
             <label for="fname">Vorname</label>
             <input id="fname" name="fname" type="text" class="form-control" placeholder="Vorname" required oninput="checkInputVorname(this)">
@@ -32,7 +32,7 @@
             <label class="control-label" for="password2" title='Passwort Voraussetzungen:
             min. 8 Zeichen
             max. 20 Zeichen'>Passwort bestätigen<sup>?</sup></label>
-            <input id="password2" name="password2" type="password" class="form-control" placeholder="Passwort bestätigen" required oninput="checkInputPasswordRepeat(this)">
+            <input id="password2" name="password2" type="password" class="form-control" placeholder="Passwort bestätigen" required oninput="checkInputPassword(this)">
         </div>
         <div>
             Wenn du bereits einen Account besitzt, kannst du dich <a href="/user/login">hier</a> anmelden.

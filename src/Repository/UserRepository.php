@@ -35,18 +35,22 @@ class UserRepository extends Repository
      */
     public function create($firstName, $lastName, $email, $username, $password)
     {
-        $password = sha1($password);
+        if (strlen($firstName) > 1 && strlen($lastName) > 1 &&
+            strlen($password) > 7 && strlen($password) < 21 &&
+            strlen($email) > 1 && strlen($username) > 3 &&
+            strlen($username) < 21) {
+            $password = sha1($password);
 
-        $query = "INSERT INTO $this->tableName (firstName, lastName, email, username, password) VALUES (?, ?, ?, ?, ?)";
+            $query = "INSERT INTO $this->tableName (firstName, lastName, email, username, password) VALUES (?, ?, ?, ?, ?)";
 
-        $statement = ConnectionHandler::getConnection()->prepare($query);
-        $statement->bind_param('sssss', $firstName, $lastName, $email, $username, $password);
+            $statement = ConnectionHandler::getConnection()->prepare($query);
+            $statement->bind_param('sssss', $firstName, $lastName, $email, $username, $password);
 
-        if (!$statement->execute()) {
-            throw new Exception($statement->error);
+            if (!$statement->execute()) {
+                throw new Exception($statement->error);
+            }
+            return $statement->insert_id;
         }
-
-        return $statement->insert_id;
     }
     public function login($username, $password) {
         $password = sha1($password);
@@ -67,7 +71,6 @@ class UserRepository extends Repository
         if (!$result) {
             throw new Exception($statement->error);
         }
-
         // Ersten Datensatz aus dem Reultat holen
         $row = $result->fetch_object();
 
@@ -82,5 +85,26 @@ class UserRepository extends Repository
 
         // Den gefundenen Datensatz zurückgeben
         // return $row;
+    }
+    public function editEntry($firstName, $lastName, $email, $password, $id) {
+        if (strlen($firstName) > 3 && strlen($lastName) > 3 &&
+            strlen($password) > 7 && strlen($password) < 21) {
+
+            $query = "UPDATE $this->tableName SET firstName=?, lastName=?, email=?, password=? WHERE id=?";
+
+            $statement = ConnectionHandler::getConnection()->prepare($query);
+            $statement->bind_param('ssssi', $firstName, $lastName, $email, sha1($password), $id);
+        }
+        else if (strlen($firstName) > 3 && strlen($lastName) > 3) {
+            $query = "UPDATE $this->tableName SET firstName=?, lastName=?, email=? WHERE id=?";
+
+            $statement = ConnectionHandler::getConnection()->prepare($query);
+            $statement->bind_param('sssi', $firstName, $lastName, $email, $id);
+        }
+
+        if (!$statement->execute()) {
+            throw new Exception($statement->error);
+        }
+        return $statement->insert_id;
     }
 }

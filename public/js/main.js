@@ -1,5 +1,5 @@
 function checkInputVorname(checkVorname) {
-    if(checkVorname.value.length < 3) {
+    if(checkVorname.value.length < 2) {
         checkVorname.style.border = "2px solid red";
     }
     else {
@@ -8,7 +8,7 @@ function checkInputVorname(checkVorname) {
 }
 
 function checkInputNachname(checkNachname) {
-    if(checkNachname.value.length < 3) {
+    if(checkNachname.value.length < 2) {
         checkNachname.style.border = "2px solid red";
     }
     else {
@@ -36,20 +36,23 @@ function checkInputEmail(checkEmail) {
 }
 
 function checkInputPassword(checkPassword) {
+    var pw1 = document.getElementById("password");
+    var pw2 = document.getElementById("password2");
+    if(pw1.value.length != 0 && pw2.value.length!= 0){
+        if(pw1.value != pw2.value){
+            pw1.style.border = "2px solid red";
+            pw2.style.border = "2px solid red";
+        }
+        else{
+            pw1.style.border = "2px solid green";
+            pw2.style.border = "2px solid green";
+        }
+    }
     if(checkPassword.value.length < 8 || checkPassword.value.length > 20) {
         checkPassword.style.border = "2px solid red";
     }
     else {
         checkPassword.style.border = "2px solid green";
-    }
-}
-
-function checkInputPasswordRepeat(checkPasswordRepeat) {
-    if(checkPasswordRepeat.value.length < 8 || checkPasswordRepeat.value.length > 20) {
-        checkPasswordRepeat.style.border = "2px solid red";
-    }
-    else {
-        checkPasswordRepeat.style.border = "2px solid green";
     }
 }
 
