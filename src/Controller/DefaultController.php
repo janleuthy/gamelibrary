@@ -37,8 +37,8 @@ class DefaultController
      */
     public function index()
     {
+        // Hauptseite des Web Auftritts
         $login = SessionCheck::CheckSession();
-
 
         $view = new View('default/index');
         $view->title = 'Startseite';
@@ -48,6 +48,7 @@ class DefaultController
     }
     public function ueberuns()
     {
+        // Über uns Platzhalter Seite
         $login = SessionCheck::CheckSession();
 
         $view = new View('default/ueberuns');
@@ -57,6 +58,7 @@ class DefaultController
         $view->display(isset($login["id"])?$login["id"]:"");
     }
     public function kontakt() {
+        // Kontakt Platzhalter Seite
         $login = SessionCheck::CheckSession();
 
         $view = new View('default/kontakt');
@@ -67,6 +69,7 @@ class DefaultController
     }
 
     public function impressum() {
+        // Impressum Platzhalter Seite
         $login = SessionCheck::CheckSession();
 
         $view = new View('default/impressum');

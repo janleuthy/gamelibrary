@@ -11,6 +11,7 @@ use App\View\View;
 class GameController
 {
     public function index() {
+        // Index => Zeigt alle Spiele
         $login = SessionCheck::CheckSession();
         if (isset($login["id"])) {
             $gameRepository = new GameRepository();
@@ -28,6 +29,7 @@ class GameController
     }
     public function create()
     {
+        // Neues Spiel erstellen
         $login = SessionCheck::CheckSession();
         if (isset($login["id"])) {
             $view = new View('game/create');
@@ -41,6 +43,7 @@ class GameController
         }
     }
     public function edit(){
+        // Spiel editieren View
         $login = SessionCheck::CheckSession();
         if (isset($login["id"])) {
             $view = new View('game/edit');
@@ -59,6 +62,7 @@ class GameController
     }
     public function doCreate()
     {
+        // Spiel erstellen über die id
         $login = SessionCheck::CheckSession();
         if ($login) {
         if (isset($_POST['send'])) {
@@ -77,6 +81,7 @@ class GameController
     }
 
     public function doEdit() {
+        // Zum editieren des Spiels
         $login = SessionCheck::CheckSession();
         if ($login) {
             if (isset($_POST['send'])) {
@@ -96,6 +101,7 @@ class GameController
     }
 
     public function deleteCard() {
+        // Um eine Karte mit dem Spiel zu löschen
         $repository = new GameRepository();
         $repository->deleteById($_GET["id"]);
         header('Location: /game');

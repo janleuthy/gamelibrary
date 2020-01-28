@@ -1,3 +1,5 @@
+// Sorgt für ein schönes Design
+// Macht rote, sowie grüne Ränder für die Inputs
 function checkInputVorname(checkVorname) {
     if(checkVorname.value.length < 2) {
         checkVorname.style.border = "2px solid red";

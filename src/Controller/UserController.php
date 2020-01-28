@@ -13,6 +13,7 @@ class UserController
 {
     public function create()
     {
+        // Hier wird Benutzer erstellt
         $login = SessionCheck::CheckSession();
 
         $view = new View('user/create');
@@ -24,6 +25,7 @@ class UserController
 
     public function doCreate()
     {
+        // User erstellen
         $response;
         if (isset($_POST['send'])) {
             $firstName = $_POST['fname'];
@@ -44,6 +46,7 @@ class UserController
     }
 
     public function doLogin() {
+        // Einloggen
         if (isset($_POST['login'])) {
 
             $username = $_POST['username'];
@@ -62,6 +65,7 @@ class UserController
     }
 
     public function doEdit() {
+        // Bearbeiten des Users
         $login = SessionCheck::CheckSession();
         if ($login) {
             if (isset($_POST['post'])) {
@@ -80,6 +84,7 @@ class UserController
     }
 
     public function doLogout() {
+        // Logout
         session_start();
         session_destroy();
         unset($_SESSION["count"]);
@@ -89,6 +94,7 @@ class UserController
     }
 
     public function login() {
+        // Login
         $login = SessionCheck::CheckSession();
         if (!isset($login["id"]))
         {
@@ -105,6 +111,7 @@ class UserController
 
     public function edit()
     {
+        // User editieren
         $login = SessionCheck::CheckSession();
         if (isset($login["id"])) {
             $view = new View('user/edit');
@@ -124,6 +131,7 @@ class UserController
 
     public function profile()
     {
+        // Profil Anzeige
         $login = SessionCheck::CheckSession();
         if (isset($login["id"])) {
             $view = new View('user/profile');
@@ -143,6 +151,7 @@ class UserController
 
     public function delete()
     {
+        // Löschen
         $userRepository = new UserRepository();
         $userRepository->deleteById($_GET['id']);
 

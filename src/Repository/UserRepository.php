@@ -35,6 +35,7 @@ class UserRepository extends Repository
      */
     public function create($firstName, $lastName, $email, $username, $password)
     {
+        // Erstellen des Users
         if (strlen($firstName) > 1 && strlen($lastName) > 1 &&
             strlen($password) > 7 && strlen($password) < 21 &&
             strlen($email) > 1 && strlen($username) > 3 &&
@@ -53,6 +54,7 @@ class UserRepository extends Repository
         }
     }
     public function login($username, $password) {
+        // Log In User
         $password = sha1($password);
 
         // Query erstellen
@@ -87,6 +89,7 @@ class UserRepository extends Repository
         // return $row;
     }
     public function editEntry($firstName, $lastName, $email, $password, $id) {
+        // User editieren
         if (strlen($firstName) > 3 && strlen($lastName) > 3 &&
             strlen($password) > 7 && strlen($password) < 21) {
 

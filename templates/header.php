@@ -52,9 +52,9 @@
                 </ul>
             </div>
         </nav>
-        <header class="py-5 bg-image-full" id="sensewallpaper">
+        <div class="py-5 bg-image-full" id="sensewallpaper">
             <img class="img-fluid d-block mx-auto" src="/images/logo.png" alt="">
-        </header>
+        </div>
     </header>
 
     <main>
