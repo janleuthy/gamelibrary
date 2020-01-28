@@ -2,24 +2,17 @@
     <h1><?= $title ?></h1>
 </div>
 
-<form class="container">
+<form class="container" method="post" action="/game/doEdit">
     <div class="form-group">
         <label>Name des Spiels bearbeiten</label>
-        <input type="text" class="form-control" value="<?= $game->name; ?>" required>
-        <input type="hidden" value="<?= $game->id; ?>">
+        <input name="gamename" id="nameedit" type="text" class="form-control" value="<?= $game->name; ?>" required oninput="checkInputNewGame(this)">
+        <input type="hidden" name="gameid" value="<?= $game->id; ?>">
     </div>
     <div class="form-group">
         <label>Beschreibung des Spiels bearbeiten</label>
-        <textarea class="form-control" rows="3" required><?= $game->beschreibung; ?></textarea>
+        <textarea name="gametext" id="descriptionedit" class="form-control" rows="3" required oninput="checkInputGameDescription(this)"><?= $game->beschreibung; ?></textarea>
     </div>
-    <label>Bild hinzufügen / ändern</label>
-    <div class="form-group custom-file">
-        <input type="file" class="custom-file-input" id="customFile">
-        <label class="custom-file-label" for="customFile">Bild auswählen</label>
-        <small id="emailHelp" class="form-text text-muted">Für die optimale Anzeige, wählen Sie ein Bild mit einer 16:9 Auflösung.</small>
-    </div>
-    <br>
-    <button type="submit" class="btn btn-secondary">Speichern</button>
+    <button type="submit" name="send" class="btn btn-secondary">Speichern</button>
     <a class="btn btn-danger text-white" href="/game">Abbrechen</a>
 </form>
 

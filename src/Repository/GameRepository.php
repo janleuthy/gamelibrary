@@ -68,6 +68,22 @@ class GameRepository extends Repository
         return $statement->insert_id;
     }
 
+    public function editEntry($name, $beschreibung, $id)
+    {
+        $filename = $this->fileUpload();
+
+        $query = "UPDATE $this->tableName SET name=?, beschreibung=? WHERE id=?";
+
+        $statement = ConnectionHandler::getConnection()->prepare($query);
+        $statement->bind_param('ssi', $name, $beschreibung, $id);
+
+        if (!$statement->execute()) {
+            throw new Exception($statement->error);
+        }
+
+        return $statement->insert_id;
+    }
+
     public function readAllByUserId($userId){
         $query = "SELECT * FROM {$this->tableName} WHERE user_id = ?";
 

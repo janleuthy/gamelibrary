@@ -76,6 +76,25 @@ class GameController
         header('Location: /game');
     }
 
+    public function doEdit() {
+        $login = SessionCheck::CheckSession();
+        if ($login) {
+            if (isset($_POST['send'])) {
+                $nameedit = $_POST['gamename'];
+                $descriptionedit = $_POST['gametext'];
+                $gameid = $_POST['gameid'];
+                $repository = new GameRepository();
+                $repository->editEntry($nameedit, $descriptionedit, $gameid);
+
+            }
+
+            header('Location: /game');
+        }
+        else{
+            header('Location: /user/login');
+        }
+    }
+
     public function deleteCard() {
         $repository = new GameRepository();
         $repository->deleteById($_GET["id"]);

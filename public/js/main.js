@@ -72,10 +72,10 @@ function checkInputGameDescription(checkDescription) {
 }
 
 function checkInputPicture(checkInputPicture) {
-    if(checkDescription.value.length < 1) {
-        checkDescription.style.border = "2px solid red";
+    if(checkInputPicture.value.length < 1) {
+        checkInputPicture.style.border = "2px solid red";
     }
     else {
-        checkDescription.style.border = "2px solid green";
+        checkInputPicture.style.border = "2px solid green";
     }
 }
