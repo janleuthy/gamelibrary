@@ -136,6 +136,7 @@ class Repository
      */
     public function readAll($max = 100)
     {
+        // Alles lesen
         $query = "SELECT * FROM {$this->tableName} LIMIT 0, $max";
 
         $statement = ConnectionHandler::getConnection()->prepare($query);
@@ -164,6 +165,7 @@ class Repository
      */
     public function deleteById($id)
     {
+        // Löschen Funktion
         $query = "DELETE FROM {$this->tableName} WHERE id=?";
 
         $statement = ConnectionHandler::getConnection()->prepare($query);

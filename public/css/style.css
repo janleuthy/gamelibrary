@@ -6,6 +6,7 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
+  box-sizing: border-box;
 }
 body > .container {
   padding: 80px 15px 0;
@@ -21,8 +22,8 @@ body > .container {
   background-color: #f5f5f5;
 }
 .footer > .container {
-  padding-right: 15px;
   padding-left: 15px;
+  padding-right: 15px;
 }
 
 #cswallpaper {
@@ -34,6 +35,27 @@ body > .container {
   background-image: url("/images/wallpaper_sense.jpg");
 }
 
-#footer {
-  color: #343a40;
+.whitespacecards {
+  padding: 30px 0;
 }
+
+.topmargin {
+  margin-top: 30px; /*Set top margin*/
+}
+
+.cards {
+  width: 25rem;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.rightalign {
+  float: right;
+}
+/*
+.carousel-control-next,
+.carousel-control-prev {
+  filter: invert(100%);
+}
+*/

@@ -37,25 +37,45 @@ class DefaultController
      */
     public function index()
     {
-        // In diesem Fall möchten wir dem Benutzer die View mit dem Namen
-        //   "default_index" rendern. Wie das genau funktioniert, ist in der
-        //   View Klasse beschrieben.
+        // Hauptseite des Web Auftritts
+        $login = SessionCheck::CheckSession();
+
         $view = new View('default/index');
         $view->title = 'Startseite';
         $view->heading = 'Startseite';
-        $view->display();
+        $view->username = (isset($login["username"])?$login["username"]:"");
+        $view->display(isset($login["id"])?$login["id"]:"");
     }
     public function ueberuns()
     {
+        // Über uns Platzhalter Seite
+        $login = SessionCheck::CheckSession();
+
         $view = new View('default/ueberuns');
         $view->title = 'Über uns';
         $view->heading = 'Über uns';
-        $view->display();
+        $view->username = (isset($login["username"])?$login["username"]:"");
+        $view->display(isset($login["id"])?$login["id"]:"");
     }
     public function kontakt() {
+        // Kontakt Platzhalter Seite
+        $login = SessionCheck::CheckSession();
+
         $view = new View('default/kontakt');
         $view->title = 'Kontakt';
         $view->heading = 'Kontakt';
-        $view->display();
+        $view->username = (isset($login["username"])?$login["username"]:"");
+        $view->display(isset($login["id"])?$login["id"]:"");
+    }
+
+    public function impressum() {
+        // Impressum Platzhalter Seite
+        $login = SessionCheck::CheckSession();
+
+        $view = new View('default/impressum');
+        $view->title = 'Impressum';
+        $view->heading = 'Impressum';
+        $view->username = (isset($login["username"])?$login["username"]:"");
+        $view->display(isset($login["id"])?$login["id"]:"");
     }
 }
