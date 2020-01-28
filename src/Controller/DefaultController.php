@@ -65,4 +65,14 @@ class DefaultController
         $view->username = (isset($login["username"])?$login["username"]:"");
         $view->display(isset($login["id"])?$login["id"]:"");
     }
+
+    public function impressum() {
+        $login = SessionCheck::CheckSession();
+
+        $view = new View('default/impressum');
+        $view->title = 'Impressum';
+        $view->heading = 'Impressum';
+        $view->username = (isset($login["username"])?$login["username"]:"");
+        $view->display(isset($login["id"])?$login["id"]:"");
+    }
 }

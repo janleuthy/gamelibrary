@@ -5,11 +5,12 @@
 <form class="container">
     <div class="form-group">
         <label>Name des Spiels bearbeiten</label>
-        <input type="text" class="form-control" required>
+        <input type="text" class="form-control" value="<?= $game->name; ?>" required>
+        <input type="hidden" value="<?= $game->id; ?>">
     </div>
     <div class="form-group">
         <label>Beschreibung des Spiels bearbeiten</label>
-        <textarea class="form-control" rows="3" required></textarea>
+        <textarea class="form-control" rows="3" required><?= $game->beschreibung; ?></textarea>
     </div>
     <label>Bild hinzufügen / ändern</label>
     <div class="form-group custom-file">
@@ -19,9 +20,8 @@
     </div>
     <br>
     <button type="submit" class="btn btn-secondary">Speichern</button>
-    <a class="btn btn-danger text-white" href="/game/index">Abbrechen</a>
+    <a class="btn btn-danger text-white" href="/game">Abbrechen</a>
 </form>
-
 
 <script>
     $(".custom-file-input").on("change", function() {

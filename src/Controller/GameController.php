@@ -5,6 +5,7 @@ namespace App\Controller;
 
 
 use App\Repository\GameRepository;
+use App\Repository\Repository;
 use App\View\View;
 
 class GameController
@@ -16,6 +17,7 @@ class GameController
             $view = new View('/game/index');
             $view->title = 'Ihre Spiele';
             $view->heading = 'Spiele';
+
             $view->username = $login["username"];
             $view->games = $gameRepository->readAllByUserId($login["id"]);
             $view->display($login["id"]);
@@ -44,6 +46,10 @@ class GameController
             $view = new View('game/edit');
             $view->title = 'Spiel bearbeiten';
             $view->heading = 'Spiel bearbeiten';
+
+            $gameRepository = new GameRepository();
+            $view->game = $gameRepository->readById($_GET["id"]);
+
             $view->username = $login["username"];
             $view->display($login["id"]);
         }
@@ -51,7 +57,6 @@ class GameController
             header('Location: /user/login');
         }
     }
-
     public function doCreate()
     {
         $login = SessionCheck::CheckSession();
@@ -71,4 +76,9 @@ class GameController
         header('Location: /game');
     }
 
+    public function deleteCard() {
+        $repository = new GameRepository();
+        $repository->deleteById($_GET["id"]);
+        header('Location: /game');
+    }
 }

@@ -9,8 +9,8 @@
         <div class="card-body">
             <h5 class="card-title"><?= $game->name; ?></h5>
             <p class="card-text"><?= $game->beschreibung; ?></p>
-            <a href="#" class="btn btn-secondary">Ändern</a>
-            <a href="#" class="btn btn-danger rightalign">Löschen</a>
+            <a href="/game/edit?id=<?= $game->id; ?>" class="btn btn-secondary">Ändern</a>
+            <a href="/game/deleteCard?id=<?=$game->id; ?>" class="btn btn-danger rightalign">Löschen</a>
         </div>
     </div>
     <?php endforeach; ?>

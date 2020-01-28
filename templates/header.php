@@ -33,7 +33,10 @@
                         <a class="nav-link" href="/default/kontakt">Kontakt</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/game/index">Spiele</a>
+                        <a class="nav-link" href="/default/impressum">Impressum</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/game">Spiele</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">

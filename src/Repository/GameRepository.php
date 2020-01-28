@@ -23,12 +23,6 @@ class GameRepository extends Repository
             return "";
         }
 
-        //Überprüfung der Dateigröße
-        $max_size = 500 * 1024; //500 KB
-        if ($_FILES['file']['size'] > $max_size) {
-            return "";
-        }
-
         //Überprüfung dass das Bild keine Fehler enthält
         if (function_exists('exif_imagetype')) { //Die exif_imagetype-Funktion erfordert die exif-Erweiterung auf dem Server
             $allowed_types = array(IMAGETYPE_PNG, IMAGETYPE_JPEG);

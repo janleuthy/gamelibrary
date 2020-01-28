@@ -17,7 +17,7 @@
         </div>
         <label>Bild hinzufügen</label>
         <div class="form-group custom-file">
-            <input type="file" class="custom-file-input" id="customFile" name="file">
+            <input type="file" class="custom-file-input" id="customFile" name="file" required oninput="checkInputPicture(this)">
             <label class="custom-file-label" for="customFile">Bild auswählen</label>
             <small id="emailHelp" class="form-text text-muted">Für die optimale Anzeige, wählen sie ein Bild mit einer 16:9 Auflösung.</small>
         </div>

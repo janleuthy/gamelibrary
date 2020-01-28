@@ -23,8 +23,8 @@ class UserController
         $view->title = 'Benutzer';
         $view->heading = 'Benutzer';
         $view->users = $userRepository->readAll();
-        $view->username = $login;
-        $view->display($login);
+        $view->username = $login["username"];
+        $view->display($login["id"]);
     }
 
     public function create()
@@ -34,8 +34,8 @@ class UserController
         $view = new View('user/create');
         $view->title = 'Benutzer erstellen';
         $view->heading = 'Benutzer erstellen';
-        $view->username = $login["username"];
-        $view->display($login["id"]);
+        $view->username = "";
+        $view->display(0);
     }
 
     public function doCreate()
@@ -101,11 +101,15 @@ class UserController
     {
         $login = SessionCheck::CheckSession();
         if ($login) {
-        $view = new View('user/edit');
-        $view->title = 'Benutzer bearbeiten';
-        $view->heading = 'Benutzer bearbeiten';
-        $view->username = $login["username"];
-        $view->display($login["id"]);
+            $view = new View('user/edit');
+            $view->title = 'Benutzer bearbeiten';
+            $view->heading = 'Benutzer bearbeiten';
+
+            $userRepository = new UserRepository();
+            $view->user = $userRepository->readById($login["id"]);
+
+            $view->username = $login["username"];
+            $view->display($login["id"]);
         }
         else {
             header('location: /user/login');
@@ -118,13 +122,11 @@ class UserController
         if ($login) {
             $view = new View('user/profile');
             $view->heading = 'Profil';
-
             $view->title = "Profil";
 
             $userRepository = new UserRepository();
             $view->user = $userRepository->readById($login["id"]);
 
-           // print_r( $userRepository->user);
             $view->username = $login["username"];
             $view->display($login["id"]);
         }
